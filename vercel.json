@@ -1,0 +1,16 @@
+{
+  "functions": {
+  
+    "api/conn.php": {
+      "runtime": "vercel-php@0.7.3"
+    },
+"api/insert.php": {
+      "runtime": "vercel-php@0.7.3"
+    }
+  },
+  "routes": [
+    { "src": "/", "dest": "index.html" },
+    { "src": "/conn", "dest": "/api/conn.php" },
+    { "src": "/insert", "dest": "/api/insert.php" }
+  ]
+}
