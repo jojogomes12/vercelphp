@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário com SQLite</title>
+    <title>Formulários Deslizantes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Inserir Nome no Banco de Dados</h1>
-    <form method="POST" action="/insert">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
-        <input type="submit" value="Enviar">
-    </form>
+
+    <div class="main-container">
+
+        <div class="main-form">
+
+         <!-- Formulário de Login -->
+         <form action="login.php" method="post" class="form form-login active">
+            <h2>Entrar</h2>
+            <input type="text" name="email"  placeholder="Email" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit" name="login" onclick="">Entrar</button> <!-- Botão para alternar para o formulário de registro -->
+            <a href="#" class="form-link" onclick="showRegisterForm()">Cadastrar-se</a> <!-- Link de registro -->
+         </form>
+
+         <!-- Formulário de Registro -->
+         <form action="insert.php" method="POST" class="form form-register">
+            <h2>Cadastrar</h2>
+            <input type="text" name="name" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <input type="text" name="gift" placeholder="Presente" required>
+            <!-- Botão agora é tipo 'submit' para enviar os dados -->
+            <button type="submit" name="register">Cadastrar</button>
+            <a href="#" class="form-link" onclick="showLoginForm()">Já tem login? Entrar</a>
+        </form>
+        
+         
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
