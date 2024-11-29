@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100%;
+    margin: 0;
+    background-image: url("imagens/fundo.jpg");
+    background-size: cover;
+}
+
+.main-form {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    display: flex;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1; /* Inicialmente visível */
+}
+.main-info {
+    background-color: red;
+    position: relative;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: column; /* Adiciona essa linha para garantir que os elementos sejam empilhados verticalmente */
+    justify-content: center;
+    align-items: center; /* Alinha o conteúdo no centro */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1; /* Inicialmente visível */
+}
+
+.form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    opacity: 0;
+    transform: translateX(20%);
+    z-index: 1;
+}
+
+.form.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 2;
+}
+
+.form-register {
+    transform: translateX(20%);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #D32F2F;  /* Vermelho vibrante, mais próximo do Natal */
+    color: white;
+    border: 1px solid #B71C1C;  /* Vermelho escuro para combinar com o fundo */
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 0, 0, 0.4);  /* Sombra detalhada, incluindo uma cor vermelha suave */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito de hover com tom de verde Natalino */
+button:hover {
+    background-color: #388E3C;  /* Verde suave para hover, remete à cor do Natal */
+    border-color: #2C6B2F;      /* Cor mais escura para o hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 25px rgba(56, 142, 60, 0.4);  /* Sombra mais intensa e verde no hover */
+}
+
+button:focus {
+    outline: none;  /* Remove o contorno padrão ao focar no botão */
+}
+/* Estilo para o link "Esqueceu a senha?" */
+.form-link {
+    display: inline-block; /* Altera para inline-block para evitar que o link quebre a linha */
+    margin-top: 10px;
+    color: #4CAF50; /* Verde, cor tradicional de botões de ação */
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.form-link:hover {
+    text-decoration: underline; /* Adiciona o sublinhado no hover para interatividade */
+}
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px; /* Tamanho ajustado para maior destaque */
+}
+ /* Estilos do botão Sortear */
+      
+
+ .error-message {
+    color: red;
+}
+
+.timer {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff5733;
+}
